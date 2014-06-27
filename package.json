@@ -1,0 +1,13 @@
+{
+    "version": "1.0.0",
+    "name": "com.phonegap.plugins.cookies",
+    "cordova_name": "Cookies",
+    "description": "Cordova Cookies Plugin",
+    "license": "Apache 2.0",
+    "keywords": [
+        "cordova",
+        "phonegap",
+        "cookies"
+    ],
+    "engines": []
+}

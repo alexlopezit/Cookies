@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.phonegap.plugins.cookies"
+    version="1.0">
+
+    <name>Cookies</name>
+    <description>Phonegap/Cordova plugin that allows you to clear cookies of the webview. Use it for logging out the user, restart analytics session etc.</description>
+    <license>MIT</license>
+    <keywords>cordova,phonegap,cookies</keywords>
+    
+    <engines>
+        <engine name="cordova" version="&gt;=3.0.0" />
+    </engines>
+
+    <js-module src="www/cookies.js" name="cookies">
+        <clobbers target="cookies" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="Cookies">
+                <param name="ios-package" value="CDVCookies"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/CDVCookies.h" />
+        <source-file src="src/ios/CDVCookies.m" />
+
+    </platform>
+    
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Cookies" >
+                <param name="android-package" value="com.phonegap.plugins.cookies.Cookies"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/Cookies.java" target-dir="src/com/phonegap/plugins/cookies" />
+    </platform>
+</plugin>
