@@ -39,6 +39,6 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/Cookies.java" target-dir="src/com/phonegap/plugins/cookies" />
+        <source-file src="src/android/com/phonegap/plugins/cookies/Cookies.java" target-dir="src/com/phonegap/plugins/cookies" />
     </platform>
 </plugin>
